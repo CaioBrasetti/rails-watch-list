@@ -1,0 +1,8 @@
+<h3>Minhas Listas</h3>
+<ul>
+  <% @lists.each do |list| %>
+    <li><%=link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+
+<p><%=link_to "Criar uma lista de filmes", new_list_path %></p>

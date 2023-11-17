@@ -1,3 +1,32 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/2809/2809590.png" alt="" width="32" height="30" class="d-inline-block align-text-top">
+    </a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/lists/new">Criar nova lista</a>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+
+
+
+<div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://anotabahia.com/wp-content/uploads/2023/03/anotabahia-publico-voltou-a-frequentar-salas-de-cinema-geoffrey-moffett-tfrezw7pqwi-unsplash-1024x676.jpg.webp);">
+  <div class="container">
+    <h1>Salve seus filmes favoritos!</h1>
+  </div>
+</div>
+
+
+
+
+
+
+
+
 <h3>Minhas Listas</h3>
 <ul>
   <% @lists.each do |list| %>
@@ -5,4 +34,4 @@
   <% end %>
 </ul>
 
-<p><%=link_to "Criar uma lista de filmes", new_list_path %></p>
+<p><%=link_to "Criar nova lista", new_list_path %></p>

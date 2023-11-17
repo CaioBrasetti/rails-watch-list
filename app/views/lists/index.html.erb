@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="https://cdn-icons-png.flaticon.com/512/2809/2809590.png" alt="" width="32" height="30" class="d-inline-block align-text-top">
@@ -11,27 +11,26 @@
   </div>
 </nav>
 
-
-
-
-<div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://anotabahia.com/wp-content/uploads/2023/03/anotabahia-publico-voltou-a-frequentar-salas-de-cinema-geoffrey-moffett-tfrezw7pqwi-unsplash-1024x676.jpg.webp);">
-  <div class="container">
+<div class="banner text-center mb-4"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://anotabahia.com/wp-content/uploads/2023/03/anotabahia-publico-voltou-a-frequentar-salas-de-cinema-geoffrey-moffett-tfrezw7pqwi-unsplash-1024x676.jpg.webp);">
     <h1>Salve seus filmes favoritos!</h1>
-  </div>
 </div>
 
+<div class="container">
 
+  <div class="d-flex justify-content-between">
+    <h3>Minhas Listas</h3>
+    <%=link_to "Criar nova lista", new_list_path, class: "btn btn-success" %>
+  </div>
 
-
-
-
-
-
-<h3>Minhas Listas</h3>
-<ul>
-  <% @lists.each do |list| %>
-    <li><%=link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
-
-<p><%=link_to "Criar nova lista", new_list_path %></p>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <%=link_to list_path(list), class: "text-decoration-none" do %>
+        <div class="card-category">
+          <div class="text-center text-white mt-4">
+            <%= list.name %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

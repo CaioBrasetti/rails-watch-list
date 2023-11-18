@@ -1,3 +1,15 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="https://cdn-icons-png.flaticon.com/512/2809/2809590.png" alt="" width="32" height="30" class="d-inline-block align-text-top">
+    </a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "Adiciona um filme a sua lista", new_list_bookmark_path(@list), class: "text-decoration-none" %>
+        </li>
+      </ul>
+  </div>
+</nav>
 
 <h1><%= @list.name %></h1>
 <ul>
